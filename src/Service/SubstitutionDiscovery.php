@@ -32,7 +32,9 @@ class SubstitutionDiscovery
         $res = $this->checker->getWorkingResponse($urls);
 
         if (null === $res) {
-            return null;
+            return [
+                'date' => $dateTime->format('Y-m-d'),
+            ];
         }
 
         [$url, $response] = array_values($res);
@@ -42,6 +44,7 @@ class SubstitutionDiscovery
 
         return [
             'url' => $url,
+            'date' => $dateTime->format('Y-m-d'),
             'added' => DateUtil::normalize($modified)->format('Y-m-d H:i:s')
         ];
     }

@@ -5,8 +5,8 @@
 
     {% for key, day in days %}
         <div class="card">
-            <h3 class="card__header">Na {{ key }}</h3>
-            {% if day %}
+            <h3 class="card__header">Na {{ key }} – {{ day.date }}</h3>
+            {% if day.url is defined %}
                 <a class="button" href="{{ day.url }}">Zobacz</a>
                 <p class="card__info">dodane: {{ day.added }}</p>
             {% else %}
