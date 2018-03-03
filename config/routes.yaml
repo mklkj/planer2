@@ -1,3 +1,7 @@
 index:
     path: /
     controller: App\Controller\HomepageController::index
+
+hours:
+    path: /godziny-lekcyjne
+    controller: App\Controller\HoursController::index

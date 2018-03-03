@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Godziny lekcyjne{% endblock %}
+
+{% block body %}
+
+    <h2 class="typography-h2">Godziny lekcyjne</h2>
+
+    {{ table|replace({'<table': '<table class="table"'})|raw }}
+
+{% endblock %}
