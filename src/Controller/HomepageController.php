@@ -13,7 +13,6 @@ class HomepageController extends Controller
             'days' => [
                 'dziś' => $substitutions->getInfoFor('today'),
                 'jutro' => $substitutions->getInfoFor('tomorrow'),
-                'następny poniedziałek' => $substitutions->getInfoFor('next Monday'),
             ]
         ]);
     }

@@ -6,42 +6,24 @@ use DateTime;
 
 class Generator
 {
-
-    /**
-     * @var array
-     */
-    private $config;
-
-    public function __construct()
-    {
-        $this->config = [
-            'host' => 'https://www.zstiojar.edu.pl',
-            'timetable' => 'o19',
-            'date_schema' => [
-//                'j-n',
-//                'd-n',
-                'j-m',
-                'd-m',
-            ],
-        ];
-    }
-
     public function getTimetableUrl(string $date, string $timetable = null) : string
     {
+        $url = sprintf(
+            '%1$s/plan/zastepstwa/%2$s/plany/%3$s.html',
+            rtrim(getenv('TIMETABLE_HOST'), '/'),
+            $date,
+            $timetable
+        );
+
         if (null === $timetable) {
-            return sprintf(
+            $url = sprintf(
                 '%1$s/plan/zastepstwa/%2$s',
-                rtrim($this->config['host'], '/'),
+                rtrim(getenv('TIMETABLE_HOST'), '/'),
                 $date
             );
         }
 
-        return sprintf(
-            '%1$s/plan/zastepstwa/%2$s/plany/%3$s.html',
-            rtrim($this->config['host'], '/'),
-            $date,
-            $timetable
-        );
+        return $url;
     }
 
     /**
@@ -55,10 +37,10 @@ class Generator
     {
         $urls = [];
 
-        foreach ((array) $this->config['date_schema'] as $key => $value) {
+        foreach (explode(',', getenv('SUBSTITUTIONS_DATE_SCHEMAS')) as $key => $value) {
             $urls[] = $this->getTimetableUrl(
                 $date->format($value),
-                $this->config['timetable']
+                getenv('TIMETABLE_SYMBOL')
             );
         }
 
@@ -76,8 +58,12 @@ class Generator
     {
         $urls = [];
 
-        foreach ((array) $this->config['date_schema'] as $key => $value) {
-            $urls[] = $this->getTimetableUrl($date->format($value));
+        foreach (explode(',', getenv('SUBSTITUTIONS_DATE_SCHEMAS')) as $key => $value) {
+            $urls[] = $this->getTimetableUrl(sprintf(
+                '%1$s/plan/zastepstwa/%2$s',
+                rtrim(getenv('TIMETABLE_HOST'), '/'),
+                $date->format($value)
+            ));
         }
 
         return $urls;
