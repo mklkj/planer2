@@ -1,5 +1,26 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <h2 class="typography-h2">Zastępstwa</h2>
+
+    {% for key, day in days %}
+        <div class="card">
+            <h3 class="card__header">Na {{ key }}</h3>
+            {% if day %}
+                <a class="button" href="{{ day.url }}">Zobacz</a>
+                <p class="card__info">dodane: {{ day.added }}</p>
+            {% else %}
+                Brak
+            {% endif %}
+        </div>
+    {% endfor %}
+
+    <hr>
+
+    <div class="card">
+        <h3 class="card__header">Wspomagacze</h3>
+        <a href="https://wulkanowy.github.io" class="button">🌋 Wulkanowy dzienniczek</a>
+        <a href="https://github.com/mklkj/medium-volcano#instalacja" class="button">Średni wulkan</a>
+    </div>
 
 {% endblock %}
