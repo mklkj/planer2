@@ -11,6 +11,7 @@ class HomepageController extends Controller
     {
         return $this->render('homepage.html.twig', [
             'days' => [
+                'piątek' => $substitutions->getInfoFor('last friday'),
                 'dziś' => $substitutions->getInfoFor('today'),
                 'jutro' => $substitutions->getInfoFor('tomorrow'),
             ]
