@@ -35,7 +35,7 @@ class SubstitutionDiscovery
             return null;
         }
 
-        list($url, $response) = array_values($res);
+        [$url, $response] = array_values($res);
 
         /** @var Response $response */
         $modified = $response->getHeaderLine('Last-Modified');
