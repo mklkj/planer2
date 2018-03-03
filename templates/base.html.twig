@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Planer – zorganizuj swoje życie!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header__title"><a href="./">Planer</a></h1>
+        </header>
+        <main class="container">
+            {% block body %}{% endblock %}
+        </main>
+        <footer class="footer">
+            <div class="footer__content">
+                © 2018 by <a class="footer__link" href="https://leszcze.gitlab.io/">LESZCZE</a>
+            </div>
+        </footer>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
