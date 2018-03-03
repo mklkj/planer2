@@ -1,6 +1,14 @@
 {
   "name": "Planer2",
   "repository": "https://github.com/mklkj/planer2",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/php"
+    }
+  ],
   "env": {
     "APP_ENV": {
       "description": "App environment",
