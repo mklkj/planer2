@@ -4,6 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
+    "heroku-postbuild": "npm run build",
     "compile": "./node_modules/.bin/encore dev",
     "watch": "./node_modules/.bin/encore dev --watch",
     "build": "./node_modules/.bin/encore production"
