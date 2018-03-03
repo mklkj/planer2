@@ -8,9 +8,6 @@ use GuzzleHttp\Psr7\Response;
 
 class Checker
 {
-    /**
-     * @var Client
-     */
     private $client;
 
     public function __construct()
@@ -18,11 +15,6 @@ class Checker
         $this->client = new Client();
     }
 
-    /**
-     * @param string $url
-     *
-     * @return Response|null
-     */
     public function check(string $url) : ?Response
     {
         try {
@@ -32,13 +24,6 @@ class Checker
         }
     }
 
-    /**
-     * Check each item from array for http response 200.
-     *
-     * @param array $urls
-     *
-     * @return array|null
-     */
     public function getWorkingResponse(array $urls) : ?array
     {
         foreach ($urls as $key => $value) {

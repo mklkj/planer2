@@ -4,7 +4,7 @@ namespace App\Service;
 
 use DateTime;
 
-class Generator
+class SubstitutionUrlsGenerator
 {
     public function getUrlsForClass(DateTime $date): array
     {

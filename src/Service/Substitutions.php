@@ -5,25 +5,19 @@ namespace App\Service;
 use App\Utils\DateUtil;
 use GuzzleHttp\Psr7\Response;
 
-class SubstitutionDiscovery
+class Substitutions
 {
-    /**
-     * @var Generator
-     */
     private $generator;
 
-    /**
-     * @var Checker
-     */
     private $checker;
 
-    public function __construct(Generator $generator, Checker $checker)
+    public function __construct(SubstitutionUrlsGenerator $generator, Checker $checker)
     {
         $this->generator = $generator;
         $this->checker = $checker;
     }
 
-    public function getInfoFor(string $time): ?array
+    public function getInfoFor(string $time): array
     {
         $dateTime = new \DateTime();
         $dateTime->setTimestamp(strtotime($time));

@@ -18,6 +18,21 @@
     <hr>
 
     <div class="card">
+        <h3 class="card__header">Plan lekcji</h3>
+        <a href="{{ timetable.url }}" class="button">Zobacz</a>
+        <p class="card__info">Ostatnia modyfikacja: {{ timetable.modified }}</p>
+    </div>
+
+    <hr>
+
+    <div class="card">
+        <h3 class="card__header">Dziennik</h3>
+        <a href="{{ log_url }}" class="button">Przejdź</a>
+    </div>
+
+    <hr>
+
+    <div class="card">
         <h3 class="card__header">Wspomagacze</h3>
         <a href="https://wulkanowy.github.io" class="button">🌋 Wulkanowy dzienniczek</a>
         <a href="https://github.com/mklkj/medium-volcano#instalacja" class="button">Średni wulkan</a>
