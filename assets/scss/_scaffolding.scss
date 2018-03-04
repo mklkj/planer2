@@ -2,13 +2,14 @@
 // ___________________________________________________
 
 html {
-  background: #EFEFEF;
-  font-size: $font-size-base;
+  background: $background-color;
   box-sizing: border-box;
+  font-size: $font-size-base;
 }
+
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -21,14 +22,15 @@ body {
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 a {
-  transition: color 0.3s ease-in-out 0s;
   color: $link-color;
   text-decoration: underline;
+  transition: color .3s ease-in-out 0s;
 
   &:hover {
     color: $link-color-hover;
@@ -39,13 +41,14 @@ a {
 hr {
   border-bottom: 0;
   border-left: 0;
-  border-right: 0px;
-  border-top: 1px dashed #555;
+  border-right: 0;
+  border-top: 1px dashed $hr-color;
   margin: 40px 0 30px;
 }
 
 // https://gist.github.com/unruthless/413930
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -53,26 +56,26 @@ sub, sup {
 }
 
 sup {
-  top: -0.5em;
+  top: -.5em;
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -.25em;
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
   height: 1px;
-  padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
+.clearfix::after {
   clear: both;
+  content: '';
+  display: table;
 }

@@ -1,13 +1,10 @@
-// Container
-// ___________________________________________________
-
 .container {
   margin: 20px;
   margin-bottom: -$footer-height;
   min-height: calc(100% - 60px - 20px);
 
-  &:after {
-    content: "";
+  &::after {
+    content: '';
     display: block;
     height: $footer-height;
   }

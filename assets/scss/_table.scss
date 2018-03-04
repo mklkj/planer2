@@ -1,18 +1,18 @@
-// Table
-// ___________________________________________________
-
 .table {
-  @extend .card;
+  @extend %card;
 
   border-collapse: collapse;
-  width: 100%;
   margin: 5px;
+  width: 100%;
 }
 
-.table, .table td, .table th {
-  border: 1px solid silver;
+.table,
+.table td,
+.table th {
+  border: 1px solid $silver;
 }
 
-.table td, .table th {
+.table td,
+.table th {
   padding: 5px 8px;
 }

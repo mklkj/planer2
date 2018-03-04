@@ -1,25 +1,22 @@
-// Footer
-// ___________________________________________________
-
 .footer {
-  height: $footer-height;
   background: $footer-background;
-}
+  height: $footer-height;
 
-.footer__content {
-  line-height: $footer-height;
-  margin: 0 15px;
-  text-align: right;
-  font-size: 0.9em;
-  color: lighten($base-color, 50%)
-}
+  &__content {
+    color: lighten($base-color, 50%);
+    font-size: .9em;
+    line-height: $footer-height;
+    margin: 0 15px;
+    text-align: right;
+  }
 
-.footer__link {
-  color: inherit;
-  text-decoration: none;
-  transform: color 0.3s;
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    transform: color .3s;
 
-  &:hover {
-    color: lighten($base-color, 40%)
+    &:hover {
+      color: lighten($base-color, 40%);
+    }
   }
 }

@@ -1,20 +1,16 @@
-// Buttons
-// ___________________________________________________
-
 .button {
-  display: inline-block;
-  padding: 5px 20px;
-  margin: 5px 0;
-  text-decoration: none;
+  background: $buttons-background;
   border-radius: 2px;
-  background: #fff;
-  transform: background 0.3s;
-  box-shadow:
-    0 2px 2px 0 rgba(0,0,0, 0.14),
-    0 3px 1px -2px rgba(0,0,0, 0.2),
-    0 1px 5px 0 rgba(0,0,0, 0.12);
+  box-shadow: 0 2px 2px 0 $shadow-color,
+          0 3px 1px -2px $shadow-color,
+          0 1px 5px 0 $shadow-color;
+  display: inline-block;
+  margin: 5px 0;
+  padding: 5px 20px;
+  text-decoration: none;
+  transform: background .3s;
 
   &:focus {
-    background: #ddd;
+    background: $buttons-background-focus;
   }
 }

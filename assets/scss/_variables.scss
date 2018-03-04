@@ -1,20 +1,31 @@
-// Variables
-// ___________________________________________________
-
 $base-line-height: 1.618;
 $base-font-size: 1.6rem;
 $vertical-rhythm: $base-line-height * $base-font-size;
 
+$shadow-color: rgba(0, 0, 0, .12);
+$silver: #c0c0c0;
+
 // scaffolding
+$background-color: #efefef;
 $base-color: #333;
 $font-size-base: 62.5%;
-$font-stack: Arial, sans-serif;;
+$font-stack: Arial, sans-serif;
 $link-color-hover: #222;
 $link-color: #555;
+$hr-color: #555;
+
+// buttons
+$buttons-background: #fff;
+$buttons-background-focus: #ddd;
+
+// card
+$card-background: rgba(255, 255, 255, .2);
 
 // header
+$header-background: #795548;
 $header-height: 60px;
+$header-color: #fff;
 
 // footer
-$footer-background: rgba(20, 20, 20, 0.9);
+$footer-background: rgba(20, 20, 20, .9);
 $footer-height: 40px;
