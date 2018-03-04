@@ -1,7 +1,7 @@
 {
   "name": "planer2",
   "version": "0.1.0",
-  "description": "",
+  "description": "Organize your life!",
   "main": "webpack.config.js",
   "scripts": {
     "heroku-postbuild": "npm run build",

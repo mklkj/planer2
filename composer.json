@@ -1,4 +1,6 @@
 {
+    "name": "mklkj/planer2",
+    "description": "Organize your life!",
     "type": "project",
     "license": "proprietary",
     "require": {
