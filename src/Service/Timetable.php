@@ -21,6 +21,7 @@ class Timetable
         if (null === $res) {
             return [
                 'url' => $url,
+                'modified' => '',
             ];
         }
 

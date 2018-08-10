@@ -5,10 +5,11 @@ namespace App\Controller;
 use App\Service\Substitutions;
 use App\Service\Timetable;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 
 class HomepageController extends Controller
 {
-    public function index(Substitutions $substitutions, Timetable $timetable)
+    public function index(Substitutions $substitutions, Timetable $timetable): Response
     {
         return $this->render('homepage.html.twig', [
             'days' => [
