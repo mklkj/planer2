@@ -26,6 +26,9 @@
     "psr/simple-cache": {
         "version": "1.0.0"
     },
+    "ralouphie/getallheaders": {
+        "version": "2.0.5"
+    },
     "sensiolabs/security-checker": {
         "version": "4.0",
         "recipe": {
@@ -61,6 +64,9 @@
             "version": "3.3",
             "ref": "c646e4b71af082e94b5014daca36ef6812bad076"
         }
+    },
+    "symfony/contracts": {
+        "version": "v1.0.2"
     },
     "symfony/debug": {
         "version": "v4.0.5"
@@ -157,6 +163,9 @@
     },
     "symfony/var-dumper": {
         "version": "v4.0.5"
+    },
+    "symfony/var-exporter": {
+        "version": "v4.2.3"
     },
     "symfony/web-profiler-bundle": {
         "version": "3.3",
