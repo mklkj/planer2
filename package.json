@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/mklkj/planer2#readme",
   "dependencies": {
-    "@symfony/webpack-encore": "^0.24.0",
+    "@symfony/webpack-encore": "^0.27.0",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
     "sass-loader": "^7.1.0",
